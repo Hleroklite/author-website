@@ -8,7 +8,7 @@ body {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     max-width: 900px;
     margin: auto;
 }
@@ -27,10 +27,45 @@ a:hover {
 }
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(180deg, #0A0A0F, #12121A);
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 120px;
+
+  background: url("images/hero-bg.jpg") center / cover no-repeat;
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 15, 0.6),
+    rgba(10, 10, 15, 0.3),
+    rgba(10, 10, 15, 0.6)
+  );
+}
+
+/* Keep text above overlay */
+.hero * {
+  position: relative;
+}
+
+
+.hero h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #B4B9C6;
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
 
 .substack-btn {
     display: inline-block;
@@ -41,8 +76,74 @@ a:hover {
     border-radius: 6px;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0A0A0F 0%, #0F1320 100%);
+  color: #F5F7FA;
+  line-height: 1.6;
+}
+
 footer {
     text-align: center;
     padding: 40px 20px;
     border-top: 1px solid #1C1F2A;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+
+.projects-intro {
+  color: #A7ACBA;
+  font-size: 1.1rem;
+  margin: 0 0 40px;
+}
+
+.projects-section h2,
+.projects-intro {
+  text-align: center;
+}
+
+.projects-intro {
+  color: #A7ACBA;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.project-card {
+  background: #171B2A;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+}
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 20px;
+  background-color: #5C6270;
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #F5F7FA;
+}
+
+.project-status {
+  margin: 0;
+  font-size: 1rem;
+  color: #B4B9C6;
 }
