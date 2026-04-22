@@ -317,12 +317,33 @@ footer {
   margin: 0 0 40px;
 }
 
-.about-section p {
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.about-content {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 18px;
+  line-height: 1.85;
   color: #C8CFDA;
-  line-height: 1.8;
   text-align: left;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #E2E6F0;
+}
+
+.about-closing {
+  margin-top: 10px;
+  font-style: italic;
+  color: #A7ACBA;
 }
 
 .contact-section p {
@@ -369,4 +390,216 @@ footer {
   max-width: 30px;
   max-height: 30px;
   display: block;
+}
+
+/* =========================
+   PROJECT PAGE
+========================= */
+
+.project-hero-section,
+.project-overview-section,
+.project-art-section,
+.project-navigation-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* PROJECT HERO */
+
+.project-hero {
+  text-align: center;
+}
+
+.project-hero h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: #F5F7FA;
+}
+
+.project-status {
+  font-size: 1rem;
+  color: #A7ACBA;
+  margin: 0 0 30px;
+}
+
+.project-hero-cover img {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 28px;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(124, 92, 255, 0.18),
+    0 0 80px rgba(124, 92, 255, 0.12);
+}
+
+.project-tagline {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #C8CFDA;
+  line-height: 1.8;
+}
+
+/* OVERVIEW */
+
+.project-overview-section h2,
+.project-art-section h2 {
+  font-size: 2rem;
+  color: #F5F7FA;
+  text-align: center;
+  margin-bottom: 30px;;
+}
+
+.project-overview-section p {
+  max-width: 800px;
+  margin: 0 auto 18px;
+  line-height: 1.85;
+  color: #C8CFDA;
+  text-align: left;
+}
+
+/* OFFICIAL ART */
+
+.project-art-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 28, 0.5),
+    rgba(10, 10, 18, 0.7)
+  );
+
+  border-radius: 16px;
+}
+
+.project-art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.project-art-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #171B2A;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-art-grid img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(124, 92, 255, 0.15);
+}
+
+.project-art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.project-art-gallery img {
+  height: 360px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #171B2A;
+  padding: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-art-gallery img:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(124, 92, 255, 0.15);
+}
+
+.project-art-gallery a {
+  display: inline-block;
+  border-radius: 12px;
+}
+
+/* BACK LINK */
+
+.project-navigation-section {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #171B2A;
+  color: #F5F7FA;
+  border: 1px solid #252A3A;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 92, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(124, 92, 255, 0.18);
+}
+
+.project-reading-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.project-reading-section h2 {
+  font-size: 2rem;
+  color: #F5F7FA;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.project-reading-subsection {
+  margin-top: 50px;
+  padding: 20px 0 40px;
+  text-align: center;
+  border-top: 1px solid rgba(124, 92, 255, 0.12);
+  border-bottom: 1px solid rgba(124, 92, 255, 0.12);
+}
+
+.project-reading-subsection h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #F5F7FA;
+}
+
+.project-overview-section h2,
+.project-art-section h2 {
+  color: #7C5CFF;
+}
+
+.project-reading-subsection .reading-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
 }
