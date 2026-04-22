@@ -179,6 +179,8 @@ footer {
   align-items: center;
 }
 
+
+
 .reading-link {
   display: inline-flex;
   align-items: center;
@@ -197,9 +199,9 @@ footer {
 }
 
 .reading-link img {
-  max-width: 28px;
-  max-height: 28px;
-  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .featured-title {
